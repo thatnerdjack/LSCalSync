@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		859585998924784BEC23D64C /* Pods_LSCalSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D756BCA34351A06A67D9D0 /* Pods_LSCalSync.framework */; };
 		C1F4431F1C189A3D00F7B2C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4431E1C189A3D00F7B2C2 /* AppDelegate.swift */; };
 		C1F443211C189A3D00F7B2C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F443201C189A3D00F7B2C2 /* ViewController.swift */; };
 		C1F443241C189A3D00F7B2C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F443221C189A3D00F7B2C2 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		C1F443291C189A3D00F7B2C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F443271C189A3D00F7B2C2 /* LaunchScreen.storyboard */; };
 		C1F443341C189A3D00F7B2C2 /* LSCalSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F443331C189A3D00F7B2C2 /* LSCalSyncTests.swift */; };
 		C1F4433F1C189A3D00F7B2C2 /* LSCalSyncUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4433E1C189A3D00F7B2C2 /* LSCalSyncUITests.swift */; };
+		C1F4434D1C189AB800F7B2C2 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C1F4434C1C189AB800F7B2C2 /* Podfile */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68B37E0AFFE12037F587B77C /* Pods-LSCalSync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSCalSync.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSCalSync/Pods-LSCalSync.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F4431B1C189A3D00F7B2C2 /* LSCalSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSCalSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F4431E1C189A3D00F7B2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1F443201C189A3D00F7B2C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		C1F4433A1C189A3D00F7B2C2 /* LSCalSyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSCalSyncUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F4433E1C189A3D00F7B2C2 /* LSCalSyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSCalSyncUITests.swift; sourceTree = "<group>"; };
 		C1F443401C189A3D00F7B2C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1F4434C1C189AB800F7B2C2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D2D756BCA34351A06A67D9D0 /* Pods_LSCalSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSCalSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E771625EC22BA067049981A0 /* Pods-LSCalSync.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSCalSync.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSCalSync/Pods-LSCalSync.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				859585998924784BEC23D64C /* Pods_LSCalSync.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0474617D655886CF15C2C9AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68B37E0AFFE12037F587B77C /* Pods-LSCalSync.debug.xcconfig */,
+				E771625EC22BA067049981A0 /* Pods-LSCalSync.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		494CC35E8F125CF177D3F208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2D756BCA34351A06A67D9D0 /* Pods_LSCalSync.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1F443121C189A3D00F7B2C2 = {
 			isa = PBXGroup;
 			children = (
+				C1F4434C1C189AB800F7B2C2 /* Podfile */,
 				C1F4431D1C189A3D00F7B2C2 /* LSCalSync */,
 				C1F443321C189A3D00F7B2C2 /* LSCalSyncTests */,
 				C1F4433D1C189A3D00F7B2C2 /* LSCalSyncUITests */,
 				C1F4431C1C189A3D00F7B2C2 /* Products */,
+				0474617D655886CF15C2C9AD /* Pods */,
+				494CC35E8F125CF177D3F208 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1F443431C189A3D00F7B2C2 /* Build configuration list for PBXNativeTarget "LSCalSync" */;
 			buildPhases = (
+				7C30A9291C4D2BEFAAD8BC42 /* Check Pods Manifest.lock */,
 				C1F443171C189A3D00F7B2C2 /* Sources */,
 				C1F443181C189A3D00F7B2C2 /* Frameworks */,
 				C1F443191C189A3D00F7B2C2 /* Resources */,
+				0B8A12895F277540D4A80585 /* Embed Pods Frameworks */,
+				EA9094669055E32C379DD952 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +263,7 @@
 			files = (
 				C1F443291C189A3D00F7B2C2 /* LaunchScreen.storyboard in Resources */,
 				C1F443261C189A3D00F7B2C2 /* Assets.xcassets in Resources */,
+				C1F4434D1C189AB800F7B2C2 /* Podfile in Resources */,
 				C1F443241C189A3D00F7B2C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +283,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B8A12895F277540D4A80585 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSCalSync/Pods-LSCalSync-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C30A9291C4D2BEFAAD8BC42 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA9094669055E32C379DD952 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSCalSync/Pods-LSCalSync-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1F443171C189A3D00F7B2C2 /* Sources */ = {
@@ -397,6 +476,7 @@
 		};
 		C1F443441C189A3D00F7B2C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B37E0AFFE12037F587B77C /* Pods-LSCalSync.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LSCalSync/Info.plist;
@@ -408,6 +488,7 @@
 		};
 		C1F443451C189A3D00F7B2C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E771625EC22BA067049981A0 /* Pods-LSCalSync.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LSCalSync/Info.plist;
@@ -484,6 +565,7 @@
 				C1F443451C189A3D00F7B2C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1F443461C189A3D00F7B2C2 /* Build configuration list for PBXNativeTarget "LSCalSyncTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +574,7 @@
 				C1F443481C189A3D00F7B2C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1F443491C189A3D00F7B2C2 /* Build configuration list for PBXNativeTarget "LSCalSyncUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +583,7 @@
 				C1F4434B1C189A3D00F7B2C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
