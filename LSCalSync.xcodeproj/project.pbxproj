@@ -50,7 +50,7 @@
 		C1F4433A1C189A3D00F7B2C2 /* LSCalSyncUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSCalSyncUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F4433E1C189A3D00F7B2C2 /* LSCalSyncUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSCalSyncUITests.swift; sourceTree = "<group>"; };
 		C1F443401C189A3D00F7B2C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1F4434C1C189AB800F7B2C2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C1F4434C1C189AB800F7B2C2 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D2D756BCA34351A06A67D9D0 /* Pods_LSCalSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LSCalSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E771625EC22BA067049981A0 /* Pods-LSCalSync.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSCalSync.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSCalSync/Pods-LSCalSync.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
