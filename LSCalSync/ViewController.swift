@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    var calDataPath: NSURL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,24 @@ class ViewController: UIViewController {
     }
     
     func getCalData() {
-        let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
-        Alamofire.download(.GET, "http://jackshighadventureproject.website/calendar_days.json", destination: destination)
+        Alamofire.download(.GET,
+            "http://jackshighadventureproject.website/calendar_days.json",
+            destination: { (temporaryURL, response) in
+                let directoryURL = NSFileManager.defaultManager().URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)[0]
+                let pathComponent = response.suggestedFilename
+                
+                self.calDataPath = directoryURL.URLByAppendingPathComponent(pathComponent!)
+                return self.calDataPath!
+        })
+            .response { (request, response, _, error) in
+                print(response)
+                print("Downloaded file to \(self.calDataPath!)")
+        }
+    }
+    
+    func loadCalData() {
+        let fileManager = NSFileManager.defaultManager()
+//        let dataBuffer = fileManager.contentsAtPath(calDataPath?.absoluteString)
     }
 
 }
