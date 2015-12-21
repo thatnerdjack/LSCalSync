@@ -7,15 +7,19 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
-class ViewController: UIViewController {
-    var calDataPath: NSURL?
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var blockPicker: UIPickerView!
+    
+    var pickerDataSource = ["1st Block", "2nd Block", "3rd Block", "4th Block", "5th Block", "6th Block"]
+    var pickerValue :Int
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCalData()
+        self.blockPicker.dataSource = self
+        self.blockPicker.delegate = self
+        DataManager.getCalData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,25 +27,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getCalData() {
-        Alamofire.download(.GET,
-            "http://jackshighadventureproject.website/calendar_days.json",
-            destination: { (temporaryURL, response) in
-                let directoryURL = NSFileManager.defaultManager().URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)[0]
-                let pathComponent = response.suggestedFilename
-                
-                self.calDataPath = directoryURL.URLByAppendingPathComponent(pathComponent!)
-                return self.calDataPath!
-        })
-            .response { (request, response, _, error) in
-                print(response)
-                print("Downloaded file to \(self.calDataPath!)")
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "mainToBlockDisplay") {
+            let DVC = segue.destinationViewController as! BlockDisplayViewController
+            DVC.block = blockPicker.pickerValue
         }
     }
     
-    func loadCalData() {
-        let fileManager = NSFileManager.defaultManager()
-//        let dataBuffer = fileManager.contentsAtPath(calDataPath?.absoluteString)
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSoruce.count;
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickerDataSource[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerValue = row
     }
 
 }

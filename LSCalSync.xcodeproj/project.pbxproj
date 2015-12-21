@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		859585998924784BEC23D64C /* Pods_LSCalSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D756BCA34351A06A67D9D0 /* Pods_LSCalSync.framework */; };
+		C16F11F51C28737A007B4CC7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F11F41C28737A007B4CC7 /* DataManager.swift */; settings = {ASSET_TAGS = (); }; };
+		C16F11F71C287A90007B4CC7 /* BlockDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F11F61C287A90007B4CC7 /* BlockDisplayViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C1F4431F1C189A3D00F7B2C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4431E1C189A3D00F7B2C2 /* AppDelegate.swift */; };
 		C1F443211C189A3D00F7B2C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F443201C189A3D00F7B2C2 /* ViewController.swift */; };
 		C1F443241C189A3D00F7B2C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F443221C189A3D00F7B2C2 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		68B37E0AFFE12037F587B77C /* Pods-LSCalSync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSCalSync.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSCalSync/Pods-LSCalSync.debug.xcconfig"; sourceTree = "<group>"; };
+		C16F11F41C28737A007B4CC7 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C16F11F61C287A90007B4CC7 /* BlockDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockDisplayViewController.swift; sourceTree = "<group>"; };
 		C1F4431B1C189A3D00F7B2C2 /* LSCalSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSCalSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F4431E1C189A3D00F7B2C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1F443201C189A3D00F7B2C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +130,9 @@
 			children = (
 				C1F4431E1C189A3D00F7B2C2 /* AppDelegate.swift */,
 				C1F443201C189A3D00F7B2C2 /* ViewController.swift */,
+				C16F11F41C28737A007B4CC7 /* DataManager.swift */,
 				C1F443221C189A3D00F7B2C2 /* Main.storyboard */,
+				C16F11F61C287A90007B4CC7 /* BlockDisplayViewController.swift */,
 				C1F443251C189A3D00F7B2C2 /* Assets.xcassets */,
 				C1F443271C189A3D00F7B2C2 /* LaunchScreen.storyboard */,
 				C1F4432A1C189A3D00F7B2C2 /* Info.plist */,
@@ -338,6 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F443211C189A3D00F7B2C2 /* ViewController.swift in Sources */,
+				C16F11F51C28737A007B4CC7 /* DataManager.swift in Sources */,
+				C16F11F71C287A90007B4CC7 /* BlockDisplayViewController.swift in Sources */,
 				C1F4431F1C189A3D00F7B2C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
