@@ -36,4 +36,17 @@ class DataManager {
             return loadCalData()
         }
     }
+    
+    class func getDateString() -> String {
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.stringFromDate(date)
+    }
+    
+    class func printDateID() {
+        let json = loadCalData
+//        json
+        //START HERE
+    }
 }

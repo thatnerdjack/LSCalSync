@@ -9,6 +9,15 @@
 import UIKit
 
 class BlockDisplayViewController: UIViewController {
+    @IBOutlet weak var dayOfWeek: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var blockNum: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
     
-    var block :Int
+    var block :Int?
+    
+    override func viewDidLoad() {
+        blockNum.text = String(block)
+    }
 }
