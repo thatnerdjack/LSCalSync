@@ -20,10 +20,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.blockPicker.dataSource = self
         self.blockPicker.delegate = self
         DataManager.getCalData()
-        var date = NSDate()
-        var formatter = NSDateFormatter()
-        formatter.dateFormat = "MM/dd/yyyy"
-        print(formatter.stringFromDate(date))
+        DataManager.printDateID()
     }
 
     override func didReceiveMemoryWarning() {

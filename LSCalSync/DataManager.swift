@@ -46,7 +46,6 @@ class DataManager {
     
     class func printDateID() {
         let json = loadCalData
-//        json
-        //START HERE
+        
     }
 }
