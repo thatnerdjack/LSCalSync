@@ -6,35 +6,22 @@
 //  Copyright © 2015 Jack Doherty. All rights reserved.
 //
 
-import Alamofire
 import SwiftyJSON
 
 class DataManager {
-    static var calDataPath: NSURL?
+    static var calDataJSON :JSON = nil
     
     class func getCalData() {
-        Alamofire.download(.GET, "http://jackshighadventureproject.website/calendar_days.json", destination: { (temporaryURL, response) in
-            let directoryURL = NSFileManager.defaultManager().URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)[0]
-            let pathComponent = response.suggestedFilename
-            
-            self.calDataPath = directoryURL.URLByAppendingPathComponent(pathComponent!)
-            return self.calDataPath!
-        })
-            .response { (request, response, _, error) in
-                print(response)
-                print("Downloaded file to \(self.calDataPath!)")
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://jackshighadventureproject.website/calendar_days.json")!)
+        request.HTTPMethod = "GET"
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+            if error == nil {
+                var result = NSString(data: data!, encoding: NSASCIIStringEncoding)
+                calDataJSON = JSON(result!)
+            }
         }
-    }
-    
-    class func loadCalData() -> JSON {
-        let fileManager = NSFileManager.defaultManager()
-        if let dataBuffer = fileManager.contentsAtPath((calDataPath?.absoluteString)!) {
-            let json = JSON(dataBuffer)
-            return json
-        } else {
-            getCalData()
-            return loadCalData()
-        }
+        task.resume()
     }
     
     class func getDateString() -> String {
@@ -45,7 +32,6 @@ class DataManager {
     }
     
     class func printDateID() {
-        let json = loadCalData
         
     }
 }

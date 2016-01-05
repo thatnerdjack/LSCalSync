@@ -20,7 +20,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.blockPicker.dataSource = self
         self.blockPicker.delegate = self
         DataManager.getCalData()
-        DataManager.printDateID()
     }
 
     override func didReceiveMemoryWarning() {
