@@ -27,6 +27,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func test(sender: AnyObject) {
+        DataManager.printDateID()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "mainToBlockDisplay") {
             let DVC = segue.destinationViewController as! BlockDisplayViewController

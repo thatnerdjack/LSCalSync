@@ -32,6 +32,6 @@ class DataManager {
     }
     
     class func printDateID() {
-        
+        print(calDataJSON[0]["id"])
     }
 }
