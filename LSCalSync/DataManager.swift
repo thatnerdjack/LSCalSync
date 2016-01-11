@@ -18,7 +18,7 @@ class DataManager {
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
             if error == nil {
                 var result = NSString(data: data!, encoding: NSASCIIStringEncoding)
-                calDataJSON = JSON(result!)
+                calDataJSON = JSON(data: data!)
             }
         }
         task.resume()
@@ -32,6 +32,9 @@ class DataManager {
     }
     
     class func printDateID() {
-        print(calDataJSON[0]["id"])
+        for var i = 0; i < calDataJSON.count; i++ {
+            let id = calDataJSON[i]["id"]
+            //start here
+        }
     }
 }
