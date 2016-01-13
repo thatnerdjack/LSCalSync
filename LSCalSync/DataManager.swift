@@ -31,10 +31,15 @@ class DataManager {
         return formatter.stringFromDate(date)
     }
     
-    class func printDateID() {
+    class func getDayData(date: String) {
+        var day = [String: AnyObject]()
         for var i = 0; i < calDataJSON.count; i++ {
-            let id = calDataJSON[i]["id"]
-            //start here
+            if(calDataJSON[i]["date"].string == date) {
+                day["weekColor"] = calDataJSON[i]["color"].string
+                day["dayOfWeek"] = calDataJSON[i]["day_of_week"].string
+                day["quarter"] = calDataJSON[i]["quarter"].int
+                //add blocks to dictionary then return dictionary
+            }
         }
     }
 }
