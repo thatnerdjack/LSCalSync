@@ -27,8 +27,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func test(sender: AnyObject) {
-        DataManager.printDateID()
+    @IBAction func testFunc(sender: AnyObject) {
+        let dayData = DataManager.getDayData(DataManager.getDateString())
+        print(dayData["id"])
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

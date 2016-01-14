@@ -17,7 +17,6 @@ class DataManager {
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
             if error == nil {
-                var result = NSString(data: data!, encoding: NSASCIIStringEncoding)
                 calDataJSON = JSON(data: data!)
             }
         }
@@ -31,15 +30,19 @@ class DataManager {
         return formatter.stringFromDate(date)
     }
     
-    class func getDayData(date: String) {
+    class func getDayData(date: String) -> Dictionary<String, AnyObject> {
         var day = [String: AnyObject]()
         for var i = 0; i < calDataJSON.count; i++ {
             if(calDataJSON[i]["date"].string == date) {
+                day["date"] = calDataJSON[i]["date"].string
                 day["weekColor"] = calDataJSON[i]["color"].string
                 day["dayOfWeek"] = calDataJSON[i]["day_of_week"].string
                 day["quarter"] = calDataJSON[i]["quarter"].int
-                //add blocks to dictionary then return dictionary
+                day["blocks"] = calDataJSON[i]["calendar_blocks"].dictionaryObject
+                return day
             }
         }
+        NSException(name: "DateNotFound", reason: "Date entered was not a day found in the school year calendar.", userInfo: nil).raise()
+        return day
     }
 }

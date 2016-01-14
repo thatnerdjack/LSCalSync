@@ -31,11 +31,11 @@
                                     <outlet property="delegate" destination="8bC-Xf-vdC" id="TPq-uk-2Gj"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Niz-RO-FP5">
-                                <rect key="frame" x="67" y="508" width="89" height="30"/>
-                                <state key="normal" title="printDateID()"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgV-8z-Ma8">
+                                <rect key="frame" x="88" y="514" width="63" height="30"/>
+                                <state key="normal" title="TestFunc"/>
                                 <connections>
-                                    <action selector="test:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wyb-MP-XfW"/>
+                                    <action selector="testFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIt-AN-3wP"/>
                                 </connections>
                             </button>
                         </subviews>
