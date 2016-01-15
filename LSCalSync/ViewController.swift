@@ -28,7 +28,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     @IBAction func testFunc(sender: AnyObject) {
+//        print(DataManager.getDateString())
         let dayData = DataManager.getDayData(DataManager.getDateString())
+        print("Day stuff:")
+        print(dayData)
         print(dayData["id"])
     }
     

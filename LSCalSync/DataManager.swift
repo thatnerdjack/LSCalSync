@@ -27,6 +27,7 @@ class DataManager {
         let date = NSDate()
         let formatter = NSDateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
+        //print("Date \(formatter.stringFromDate(date))")
         return formatter.stringFromDate(date)
     }
     
