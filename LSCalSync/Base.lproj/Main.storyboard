@@ -16,21 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4S-eL-dux">
-                                <rect key="frame" x="279" y="389" width="43" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Go!"/>
-                                <connections>
-                                    <segue destination="Kld-sQ-2Nx" kind="show" id="jzu-u6-YY0"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Kp-D1-cad">
-                                <rect key="frame" x="0.0" y="165" width="600" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="Q3A-WU-J8V"/>
-                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="TPq-uk-2Gj"/>
-                                </connections>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgV-8z-Ma8">
                                 <rect key="frame" x="88" y="514" width="63" height="30"/>
                                 <state key="normal" title="TestFunc"/>
@@ -40,18 +25,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6Kp-D1-cad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="04M-JD-b5t"/>
-                            <constraint firstItem="k4S-eL-dux" firstAttribute="top" secondItem="6Kp-D1-cad" secondAttribute="bottom" constant="8" id="7ve-jG-eVv"/>
-                            <constraint firstItem="k4S-eL-dux" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AIo-NK-yJ6"/>
-                            <constraint firstItem="6Kp-D1-cad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K1M-de-kER"/>
-                            <constraint firstItem="6Kp-D1-cad" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="bfY-0f-R8j"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="blockPicker" destination="6Kp-D1-cad" id="hcQ-Pu-jG8"/>
-                        <outlet property="goButton" destination="k4S-eL-dux" id="jHD-L1-dnt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,12 +55,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-Ru-Rsa">
-                                <rect key="frame" x="271" y="206" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ0-j2-ilZ">
                                 <rect key="frame" x="281" y="409" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,6 +63,12 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxl-gk-odg">
                                 <rect key="frame" x="281" y="315" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-Ru-Rsa">
+                                <rect key="frame" x="271" y="206" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

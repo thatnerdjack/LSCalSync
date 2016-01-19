@@ -18,6 +18,7 @@ class BlockDisplayViewController: UIViewController {
     var block :Int?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         blockNum.text = String(block)
     }
 }

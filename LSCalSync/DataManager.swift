@@ -27,7 +27,6 @@ class DataManager {
         let date = NSDate()
         let formatter = NSDateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
-        //print("Date \(formatter.stringFromDate(date))")
         return formatter.stringFromDate(date)
     }
     
@@ -38,6 +37,7 @@ class DataManager {
                 day["date"] = calDataJSON[i]["date"].string
                 day["weekColor"] = calDataJSON[i]["color"].string
                 day["dayOfWeek"] = calDataJSON[i]["day_of_week"].string
+                day["specialID"] = calDataJSON[i]["special_identifier"].string
                 day["quarter"] = calDataJSON[i]["quarter"].int
                 day["blocks"] = calDataJSON[i]["calendar_blocks"].dictionaryObject
                 return day
