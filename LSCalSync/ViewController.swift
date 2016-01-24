@@ -8,10 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var blockPicker: UIPickerView!
+    
+    var pickerDataSource = ["1st Block", "2nd Block", "3rd Block", "4th Block", "5th Block", "6th Block"]
+    var pickerValue :Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.blockPicker.dataSource = self
+        self.blockPicker.delegate = self
         DataManager.getCalData()
     }
 
@@ -21,11 +28,32 @@ class ViewController: UIViewController{
     }
     
     @IBAction func testFunc(sender: AnyObject) {
+//        print(DataManager.getDateString())
+        let dayData = DataManager.getDayData("01/21/2016")
+        print(dayData["weekColor"]!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "mainToBlockDisplay") {
-            let DVC = segue.destinationViewController as! BlockDisplayViewController        }
+            let DVC = segue.destinationViewController as! BlockDisplayViewController
+            DVC.block = pickerValue
+        }
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count;
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerValue = row
     }
 
 }
